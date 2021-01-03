@@ -1,0 +1,10 @@
+pipeline{
+agent any
+stages{
+stage("demo"){
+steps{
+echo "hii welcome to d demo"
+}
+}
+}
+}
