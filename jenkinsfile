@@ -1,10 +1,30 @@
 pipeline{
 agent any
 stages{
-stage("demo"){
+stage("dev"){
+when {
+branch 'develop'
+}
 steps{
-echo "hii welcome to d demo"
+echo "hii welcome to d Dev servers"
+}
+}
+stage("uat"){
+when {
+branch 'release'
+}
+steps{
+echo "hii welcome to d uat servers"
+}
+}
+stage("prod"){
+when {
+branch 'main'
+}
+steps{
+echo "hii welcome to d prod servers"
 }
 }
 }
 }
+
